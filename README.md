@@ -28,3 +28,9 @@
 #### LAB - 03 Reflection
 
 * Today I was reminded to read all the requirements before starting to code. I spent a bunch of time upfront messing with css, when I should have been making incremental progress to the core features; Ultimately this project took longer than expected, but was very rewarding. The introduction to short-circuits and nested for-loops was great. I found that by avoiding functions and built-ins I had to think about the problems different. I Highly enjoyed this project; I can see the curriculum ramping up and I am excited for what's to come!
+
+#### LAB - 04 Pair Programming
+
+* [Navigator - Tom McGuire](https://github.com/MuckT)
+* [Driver - Patrick Jarrett PJ](https://github.com/pattywagonpbj)
+  * [PR #2](https://github.com/MuckT/about-me/pull/2)
