@@ -19,4 +19,4 @@
 
 * This was a fun project. I used a while loop to force the user to enter the name. One thing I took away from this was that conditional statements must have the whole conditional on either side of the OR / AND clause, in the past I've had issues with these conditionals by only including half of the statement of one side of the clause.
 
-* The Messing around with CSS was fun figuring out how to have the footer properly placed and not get overwritten by content was a fun stretch goal for myself.
+* The Messing around with CSS was fun figuring out how to have the footer properly placed and not get overwritten by content was a fun stretch goal for myself. I used some code I found to hide the scrollbars; reference is 'Hide Scrollbars But Keep Functionality' in Links and Resources.
