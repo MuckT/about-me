@@ -22,10 +22,10 @@ alert(`Welcome to my about me page ${userName}! \nPlease answer questions in a '
 // examples: Yes, yes, YEs, yeS, yEs, Y, y
 
 // Ask Question #1
-var questionOne = prompt('Did I go to The Evergreen State College?').toUpperCase();
-// console.log(`User normalized answer to question one is: ${questionOne}`);
+var answerOne = prompt('Did I go to The Evergreen State College?').toUpperCase();
+// console.log(`User normalized answer to question one is: ${answerOne}`);
 // Evaluate answer to question #1
-if (questionOne === 'YES' || questionOne === 'Y') {
+if (answerOne === 'YES' || answerOne === 'Y') {
   // console.log('User has answered question #1 correctly');
   alert(`${userName} - That is correct!`);
 } else {
@@ -34,10 +34,10 @@ if (questionOne === 'YES' || questionOne === 'Y') {
 }
 
 // Ask Question #2
-var questionTwo = prompt('Do I like open source projects?').toUpperCase();
-// console.log(`User normalized answer to question two is: ${questionTwo}`);
+var answerTwo = prompt('Do I like open source projects?').toUpperCase();
+// console.log(`User normalized answer to question two is: ${answerTwo}`);
 // Evaluate answer to question #2
-if (questionTwo === 'YES' || questionTwo === 'Y') {
+if (answerTwo === 'YES' || answerTwo === 'Y') {
   // console.log('User has answered question #2 correctly');
   alert(`${userName} - That is correct!`);
 } else {
@@ -46,10 +46,10 @@ if (questionTwo === 'YES' || questionTwo === 'Y') {
 }
 
 // Ask Question #3
-var questionThree = prompt('Do I test software for a living?').toUpperCase();
-// console.log(`User normalized answer to question three is: ${questionThree}`);
+var answerThree = prompt('Do I test software for a living?').toUpperCase();
+// console.log(`User normalized answer to question three is: ${answerThree}`);
 // Evaluate answer to question #3
-if (questionThree === 'YES' || questionThree === 'Y') {
+if (answerThree === 'YES' || answerThree === 'Y') {
   // console.log('User has answered question #3 correctly');
   alert(`${userName} - That is correct!`);
 } else {
@@ -58,10 +58,10 @@ if (questionThree === 'YES' || questionThree === 'Y') {
 }
 
 // Ask Question #4
-var questionFour = prompt('Does GTFS stand for \'Get Tested For Sepsis?\'').toUpperCase();
-// console.log(`User normalized answer to question four is: ${questionFour}`);
+var answerFour = prompt('Does GTFS stand for \'Get Tested For Sepsis?\'').toUpperCase();
+// console.log(`User normalized answer to question four is: ${answerFour}`);
 // Evaluate answer to question #4
-if (questionFour === 'NO' || questionFour === 'N') {
+if (answerFour === 'NO' || answerFour === 'N') {
   // console.log('User has answered question #4 correctly');
   alert(`${userName} - That is correct!`);
 } else {
@@ -70,10 +70,10 @@ if (questionFour === 'NO' || questionFour === 'N') {
 }
 
 // Ask Question #5
-var questionFive = prompt(`${userName}, should developers write unit tests?`).toUpperCase();
-// console.log(`User normalized answer to question five is: ${questionFive}`);
+var answerFive = prompt(`${userName}, should developers write unit tests?`).toUpperCase();
+// console.log(`User normalized answer to question five is: ${answerFive}`);
 // Evaluate answer to question #5
-if (questionFive === 'YES' || questionFive === 'Y') {
+if (answerFive === 'YES' || answerFive === 'Y') {
   // console.log('User has answered question #5 correctly.');
   alert(`${userName} - That is correct!`);
 } else {
