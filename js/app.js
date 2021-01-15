@@ -10,15 +10,16 @@ JS Requirements:
 */
 
 /* Style things */
-let vh = window.innerHeight * 0.01;
-document.documentElement.style.setProperty('--vh', `${vh}px`);
-
-// We listen to the resize event
-window.addEventListener('resize', () => {
-  // We execute the same script as before
+// Setup our function to run on various events
+var setViewHeight = function () {
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', `${vh}px`);
-});
+};
+
+// Add our event listeners
+window.addEventListener('load', setViewHeight);
+window.addEventListener('resize', setViewHeight);
+window.addEventListener('orientationchange', setViewHeight);
 
 /*
 // Ask The User their name - Display it in an alert - Force the user to enter a name
