@@ -27,7 +27,7 @@ if ('serviceWorker' in navigator) {
 }
 
 
-
+/*
 // Ask The User their name - Display it in an alert - Force the user to enter a name
 var userName;
 while (userName === undefined || userName === null || userName === '') {
@@ -99,3 +99,4 @@ if (answerFive === 'YES' || answerFive === 'Y') {
   alert(`${userName} - That is incorrect. Good developers write unit tests.`);
   window.open('https://cloud.google.com/solutions/devops/devops-tech-test-automation#ways_to_improve_continuous_testing', '_blank');
 }
+*/
