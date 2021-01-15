@@ -19,7 +19,6 @@ var setViewHeight = function () {
 // Add our event listeners
 window.addEventListener('load', setViewHeight);
 window.addEventListener('resize', setViewHeight);
-window.addEventListener('orientationchange', setViewHeight);
 
 /*
 // Ask The User their name - Display it in an alert - Force the user to enter a name
