@@ -16,6 +16,7 @@
 * [Hide Scrollbars But Keep Functionality](https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp)
 * [The trick to viewport units on mobile](https://css-tricks.com/the-trick-to-viewport-units-on-mobile/)
 * [Listening to multiple events in vanilla JS](https://gomakethings.com/listening-to-multiple-events-in-vanilla-js/)
+* [Orientation](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/orientation)
 
 ### Reflections and Comments
 
