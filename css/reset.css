@@ -28,9 +28,10 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-body {
+/* Comment Out this portion of reset */
+/* body { 
 	line-height: 1;
-}
+} */
 ol, ul {
 	list-style: none;
 }
