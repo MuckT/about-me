@@ -9,11 +9,11 @@ JS Requirements:
  - Five prompt questions
 */
 
+
 /****
- * Service Worker Code
+ * Register a service worker
  * Source: https://developers.google.com/web/fundamentals/primers/service-workers
  */
-/* Register a service worker */
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function () {
     navigator.serviceWorker.register('../about-me/sw.js').then(function (registration) {
@@ -25,7 +25,6 @@ if ('serviceWorker' in navigator) {
     });
   });
 }
-
 
 
 // Ask The User their name - Display it in an alert - Force the user to enter a name

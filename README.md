@@ -14,6 +14,7 @@
 * [Lang](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang)
 * [Sticky-footers](https://css-tricks.com/fun-viewport-units/#full-height-layouts-hero-images-and-sticky-footers)
 * [Hide Scrollbars But Keep Functionality](https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp)
+* [Service Workers](https://developers.google.com/web/fundamentals/primers/service-workers)
 
 ### Reflections and Comments
 

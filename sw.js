@@ -1,5 +1,10 @@
 'use strict';
 
+/****
+ * Service Worker Code
+ * Source: https://developers.google.com/web/fundamentals/primers/service-workers
+ */
+
 var CACHE_NAME = 'my-site-cache-v1';
 var urlsToCache = [
   '/',
