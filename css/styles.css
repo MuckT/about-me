@@ -12,6 +12,8 @@ body main{
   max-width: 960px;
   margin: auto;
   overflow: scroll;
+  height: calc(100vh - 53px); /* Fallback for browsers that do not support Custom Properties */
+  height: calc((var(--vh, 1vh) * 100) - 53px);
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
