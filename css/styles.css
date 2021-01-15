@@ -11,8 +11,8 @@ body {
 body main{
   max-width: 960px;
   margin: auto;
-  min-height: calc(100vh - 53px);
-  height: calc(100vh - 53px);
+  height: calc(100vh - 53px); /* Fallback for browsers that do not support Custom Properties */
+  height: calc((var(--vh, 1vh) * 100) - 53px);
   overflow: scroll;
 }
 
