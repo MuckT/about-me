@@ -15,6 +15,7 @@
 * [Sticky-footers](https://css-tricks.com/fun-viewport-units/#full-height-layouts-hero-images-and-sticky-footers)
 * [Hide Scrollbars But Keep Functionality](https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp)
 * [The trick to viewport units on mobile](https://css-tricks.com/the-trick-to-viewport-units-on-mobile/)
+* [Listening to multiple events in vanilla JS](https://gomakethings.com/listening-to-multiple-events-in-vanilla-js/)
 
 ### Reflections and Comments
 
