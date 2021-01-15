@@ -9,10 +9,28 @@ JS Requirements:
  - Five prompt questions
 */
 
+/****
+ * Service Worker Code
+ * Source: https://developers.google.com/web/fundamentals/primers/service-workers
+ */
+/* Register a service worker */
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('../sw.js').then(function (registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function (err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+
+
 
 // Ask The User their name - Display it in an alert - Force the user to enter a name
 var userName;
-while(userName === undefined || userName === null || userName === '') {
+while (userName === undefined || userName === null || userName === '') {
   userName = prompt('What is your name?');
 }
 alert(`Welcome to my about me page ${userName}! \nPlease answer questions in a 'Yes' / 'No' or 'Y' / 'N' format`);
