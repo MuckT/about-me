@@ -12,7 +12,7 @@ JS Requirements:
 /* Style things */
 // Setup our function to run on various events
 var setViewHeight = function () {
-  setTimeout(500);
+  Location.reload();
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', `${vh}px`);
 };
