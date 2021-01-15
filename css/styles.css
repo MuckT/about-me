@@ -68,17 +68,3 @@ footer {
 footer a {
   color: cornsilk;
 }
-
-@media (orientation: landscape) {
-  body main {
-    height: calc(100vh - 53px); /* Fallback for browsers that do not support Custom Properties */
-    height: calc((var(--vh, 1vh) * 100) - 53px);
-  }
-}
-
-@media (orientation: portrait) {
-  body main {
-    height: calc(100vh - 53px); /* Fallback for browsers that do not support Custom Properties */
-    height: calc((var(--vh, 1vh) * 100) - 53px);
-  }
-}

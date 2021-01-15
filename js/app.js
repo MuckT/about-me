@@ -12,6 +12,7 @@ JS Requirements:
 /* Style things */
 // Setup our function to run on various events
 var setViewHeight = function () {
+  setTimeout(500);
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', `${vh}px`);
 };
@@ -20,10 +21,6 @@ var setViewHeight = function () {
 window.addEventListener('load', setViewHeight);
 window.addEventListener('resize', setViewHeight);
 window.addEventListener('orientationchange', setViewHeight);
-document.addEventListener('webkitfullscreenchange', setViewHeight);
-document.addEventListener('mozfullscreenchange', setViewHeight);
-document.addEventListener('fullscreenchange', setViewHeight);
-document.addEventListener('msfullscreenchange', setViewHeight);
 
 /*
 // Ask The User their name - Display it in an alert - Force the user to enter a name
