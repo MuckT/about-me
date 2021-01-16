@@ -9,27 +9,10 @@ JS Requirements:
  - Five prompt questions
 */
 
-/* Style things */
-// Setup our function to run on various events
-var setViewHeight = function () {
-  let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
-};
-
-// Add our event listeners
-window.addEventListener('load', setViewHeight);
-window.addEventListener('resize', setViewHeight);
-window.addEventListener('orientationchange', setViewHeight);
-document.addEventListener('webkitfullscreenchange', setViewHeight);
-document.addEventListener('mozfullscreenchange', setViewHeight);
-document.addEventListener('fullscreenchange', setViewHeight);
-document.addEventListener('msfullscreenchange', setViewHeight);
-
-/*
 // Ask The User their name - Display it in an alert - Force the user to enter a name
-var userName;
-while(userName === undefined || userName === null || userName === '') {
-  userName = prompt('What is your name?');
+var userName = prompt('What is your name?');
+while(!userName) {
+  userName = prompt('Really, what is your name?');
 }
 alert(`Welcome to my about me page ${userName}! \nPlease answer questions in a 'Yes' / 'No' or 'Y' / 'N' format`);
 
@@ -97,4 +80,3 @@ if (answerFive === 'YES' || answerFive === 'Y') {
   alert(`${userName} - That is incorrect. Good developers write unit tests.`);
   window.open('https://cloud.google.com/solutions/devops/devops-tech-test-automation#ways_to_improve_continuous_testing', '_blank');
 }
-*/
