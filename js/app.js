@@ -183,13 +183,13 @@ for (let i = 0; i < 6; i++) {
   if (answeredCorrectly) {
     correctAnswers++;
     alert(`${userName}, how do you know so much about swallows?`);
-    break;
   } else {
     alert(`${userName}, that is incorrect.\nGuesses remaining ${5-i}`);
   }
 
   if(answeredCorrectly || i === 5) {
     alert(`${userName}, the answers are:\n${answers}!`);
+    break;
   }
 }
 
