@@ -112,7 +112,7 @@ if (answerFive === 'YES' || answerFive === 'Y') {
 } else {
   // console.log('User has answered question #5 correctly');
   alert(`${userName} - That is incorrect. Good developers write unit tests.`);
-  window.open('https://cloud.google.com/solutions/devops/devops-tech-test-automation#ways_to_improve_continuous_testing', '_blank');
+  // window.open('https://cloud.google.com/solutions/devops/devops-tech-test-automation#ways_to_improve_continuous_testing', '_blank');
 }
 
 
