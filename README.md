@@ -27,4 +27,4 @@
 
 #### LAB - 03 Reflection
 
-* ...
+* This assignment went well for me, avoiding using some built-ins like .includes() was difficult; however, it forced me to think about the problem. I think the thing that stuck with me the most was short circuiting, getting the conditionals correct and the exposure to nested loops. I probably spent 7 hours on this assignment, but once again I added some extra features to the guessing game as a personal stretch goal, stripped out some functions I had previously added, and spent a bit of time fiddling with css.
