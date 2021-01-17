@@ -1,4 +1,4 @@
-# LAB - 02
+# LAB - 02, 03
 
 ## "About Me" project
 
@@ -15,11 +15,16 @@
 * [Sticky-footers](https://css-tricks.com/fun-viewport-units/#full-height-layouts-hero-images-and-sticky-footers)
 * [Hide Scrollbars But Keep Functionality](https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp)
 * [The trick to viewport units on mobile](https://css-tricks.com/the-trick-to-viewport-units-on-mobile/)
-* [Listening to multiple events in vanilla JS](https://gomakethings.com/listening-to-multiple-events-in-vanilla-js/)
-* [Orientation](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/orientation)
+* [The Ordered List element - Attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol#attributes)
 
 ### Reflections and Comments
+
+#### LAB - 02 Reflection
 
 * This was a fun project. I used a while loop to force the user to enter the name. One thing I took away from this was that conditional statements must have the whole conditional on either side of the OR / AND clause, in the past I've had issues with these conditionals by only including half of the statement of one side of the clause.
 
 * The Messing around with CSS was fun figuring out how to have the footer properly placed and not get overwritten by content was a fun stretch goal for myself. I used some code I found to hide the scrollbars; reference is 'Hide Scrollbars But Keep Functionality' in Links and Resources.
+
+#### LAB - 03 Reflection
+
+* ...
