@@ -106,3 +106,52 @@ if (answerFive === 'YES' || answerFive === 'Y') {
   window.open('https://cloud.google.com/solutions/devops/devops-tech-test-automation#ways_to_improve_continuous_testing', '_blank');
 }
 */
+// Temp Code
+var userName = prompt('What is your name?');
+while(!userName) {
+  userName = prompt('What is your name?');
+}
+// End Temp Code
+
+// Ask Question #6 - Guessing Game & Random Int Generator
+var randomNumber = Math.ceil(Math.random(0, 1) * 100);
+// console.log(`Random Number Generated is: ${randomNumber}`);
+
+// Array to store previous guesses - Personal Stretch Goal
+var previousGuesses = [];
+
+// console.log(previousGuesses);
+for (let i = 0; i < 4; i++) {
+  var userGuess = +prompt(`Guess a Random Number between 0 and 100!\nNumber of guesses remaining ${4-i}`);
+  // console.log(`Random user guess is: ${randomNumber}`);
+  while (!userGuess || userGuess < 0 || userGuess > 100) {
+    userGuess = +prompt(`Converted value of: '${userGuess}' is not a number, or not in the valid range. Please try again.`);
+  }
+  // Don't count previously entered guesses against the user
+  var prevGuessUsed = false;
+  for (let j = 0; j < previousGuesses.length; j++) {
+    if (previousGuesses[j] === userGuess) {
+      alert(`You've already tried the number ${userGuess}. Please try a new number!`);
+      prevGuessUsed = true;
+    }
+  }
+  if (prevGuessUsed) {
+    i--;
+  // Main block - Tell user if correct or too high or too low
+  } else if (userGuess === randomNumber) {
+    alert(`${userName} you guessed correctly!`);
+    break;
+  } else if (!prevGuessUsed && userGuess < randomNumber) {
+    alert(`${userName} you're guess it too low!`);
+  } else if (!prevGuessUsed && userGuess > randomNumber) {
+    alert(`${userName} you're guess it too high!`);
+  }
+
+  // Push guess to previous guesses list
+  previousGuesses.push(userGuess);
+
+  // If user runs out of guesses inform them and show the correct answer
+  if(i === 3){
+    alert(`${userName} you're out of guesses.\nThe correct number was ${randomNumber}!`);
+  }
+}
