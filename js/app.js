@@ -19,7 +19,7 @@ Requirements:
   Requirement 2c. It should give the user exactly four opportunities to get the correct answer.
   Requirement 2d. After all attempts have been exhausted, tell the user the correct answer. Consider using a loop of some sort.
 
-3. As a user, I would like to guess the answer to a question that could have many possibilities so that I can have fun with with a guessing game.
+3. As a user, I would like to guess the answer to a question that could have many possibilities so that I can have fun with a guessing game.
   Requirement 3a. Add a 7th question that has multiple possible correct answers that are stored in an array.
   Requirement 3b. Give the user 6 attempts to guess the correct answer.
   Requirement 3c. The guesses will end once the user guesses a correct answer or they run out of attempts.
@@ -33,7 +33,8 @@ Stretch goals:
   - Attempt to make your code more DRY by putting all of the questions, answers, and responses to the first five yes/no questions into arrays (or even one huge multidimensional array), and modifying the game logic such that a ‘for’ loop will control the flow from question to question.
   - Make the number-guessing question use a random number as its correct answer.
 */
-/*
+
+
 // Ask The User their name - Display it in an alert - Force the user to enter a name
 var userName = prompt('What is your name?');
 while(!userName) {
@@ -45,6 +46,9 @@ alert(`Welcome to my about me page ${userName}! \nPlease answer questions in a '
 // Write 5 questions. Must accept 'yes' or 'no' OR 'y' or 'n' In ANY CASE
 // examples: Yes, yes, YEs, yeS, yEs, Y, y
 
+// Keep track of score
+var correctAnswer = 0;
+
 // Ask Question #1
 var answerOne = prompt('Did I go to The Evergreen State College?').toUpperCase();
 // console.log(`User normalized answer to question one is: ${answerOne}`);
@@ -52,6 +56,7 @@ var answerOne = prompt('Did I go to The Evergreen State College?').toUpperCase()
 if (answerOne === 'YES' || answerOne === 'Y') {
   // console.log('User has answered question #1 correctly');
   alert(`${userName} - That is correct!`);
+  correctAnswer++;
 } else {
   // console.log('User has answered question #1 incorrectly');
   alert(`${userName} - That is incorrect.`);
@@ -64,6 +69,7 @@ var answerTwo = prompt('Do I like open source projects?').toUpperCase();
 if (answerTwo === 'YES' || answerTwo === 'Y') {
   // console.log('User has answered question #2 correctly');
   alert(`${userName} - That is correct!`);
+  correctAnswer++;
 } else {
   // console.log('User has answered question #2 incorrectly');
   alert(`${userName} - That is incorrect.`);
@@ -76,6 +82,7 @@ var answerThree = prompt('Do I test software for a living?').toUpperCase();
 if (answerThree === 'YES' || answerThree === 'Y') {
   // console.log('User has answered question #3 correctly');
   alert(`${userName} - That is correct!`);
+  correctAnswer++;
 } else {
   // console.log('User has answered question #3 incorrectly');
   alert(`${userName} - That is incorrect.`);
@@ -88,6 +95,7 @@ var answerFour = prompt('Does GTFS stand for \'Get Tested For Sepsis?\'').toUppe
 if (answerFour === 'NO' || answerFour === 'N') {
   // console.log('User has answered question #4 correctly');
   alert(`${userName} - That is correct!`);
+  correctAnswer++;
 } else {
   // console.log('User has answered question #4 incorrectly');
   alert(`${userName} - That is incorrect. \nGTFS stands for General Transit Feed Specification`);
@@ -100,18 +108,13 @@ var answerFive = prompt(`${userName}, should developers write unit tests?`).toUp
 if (answerFive === 'YES' || answerFive === 'Y') {
   // console.log('User has answered question #5 correctly.');
   alert(`${userName} - That is correct!`);
+  correctAnswer++;
 } else {
   // console.log('User has answered question #5 correctly');
   alert(`${userName} - That is incorrect. Good developers write unit tests.`);
   window.open('https://cloud.google.com/solutions/devops/devops-tech-test-automation#ways_to_improve_continuous_testing', '_blank');
 }
-*/
-// Temp Code
-var userName = prompt('What is your name?');
-while(!userName) {
-  userName = prompt('What is your name?');
-}
-// End Temp Code
+
 
 // Ask Question #6 - Guessing Game & Random Int Generator
 var randomNumber = Math.ceil(Math.random(0, 1) * 100);
@@ -140,6 +143,7 @@ for (let i = 0; i < 4; i++) {
   // Main block - Tell user if correct or too high or too low
   } else if (userGuess === randomNumber) {
     alert(`${userName} you guessed correctly!`);
+    correctAnswer++;
     break;
   } else if (!prevGuessUsed && userGuess < randomNumber) {
     alert(`${userName} you're guess it too low!`);
@@ -155,3 +159,10 @@ for (let i = 0; i < 4; i++) {
     alert(`${userName} you're out of guesses.\nThe correct number was ${randomNumber}!`);
   }
 }
+
+// Ask Question #7 - A question that has multiple possible correct answers that are stored in an array.
+// var answers = ['African or European?', '24 miles per hour', '24mph', '11 meters per second'];
+// var userName = prompt('what is the airspeed velocity of an unladen swallow');
+
+// Return User Score in Alert
+alert(`Your score is: ${correctAnswer} / 7`);
