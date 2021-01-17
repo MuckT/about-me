@@ -40,14 +40,14 @@ var userName = prompt('What is your name?');
 while(!userName) {
   userName = prompt('Really, what is your name?');
 }
-alert(`Welcome to my about me page ${userName}! \nPlease answer questions in a 'Yes' / 'No' or 'Y' / 'N' format`);
+alert(`Welcome to my about me page ${userName}! \nPlease answer questions in a 'Yes' / 'No' or 'Y' / 'N' format.\n *Unless otherwise noted`);
 
 
 // Write 5 questions. Must accept 'yes' or 'no' OR 'y' or 'n' In ANY CASE
 // examples: Yes, yes, YEs, yeS, yEs, Y, y
 
 // Keep track of score
-var correctAnswer = 0;
+var correctAnswers = 0;
 
 // Ask Question #1
 var answerOne = prompt('Did I go to The Evergreen State College?').toUpperCase();
@@ -55,8 +55,8 @@ var answerOne = prompt('Did I go to The Evergreen State College?').toUpperCase()
 // Evaluate answer to question #1
 if (answerOne === 'YES' || answerOne === 'Y') {
   // console.log('User has answered question #1 correctly');
+  correctAnswers++;
   alert(`${userName} - That is correct!`);
-  correctAnswer++;
 } else {
   // console.log('User has answered question #1 incorrectly');
   alert(`${userName} - That is incorrect.`);
@@ -68,8 +68,8 @@ var answerTwo = prompt('Do I like open source projects?').toUpperCase();
 // Evaluate answer to question #2
 if (answerTwo === 'YES' || answerTwo === 'Y') {
   // console.log('User has answered question #2 correctly');
+  correctAnswers++;
   alert(`${userName} - That is correct!`);
-  correctAnswer++;
 } else {
   // console.log('User has answered question #2 incorrectly');
   alert(`${userName} - That is incorrect.`);
@@ -81,8 +81,8 @@ var answerThree = prompt('Do I test software for a living?').toUpperCase();
 // Evaluate answer to question #3
 if (answerThree === 'YES' || answerThree === 'Y') {
   // console.log('User has answered question #3 correctly');
+  correctAnswers++;
   alert(`${userName} - That is correct!`);
-  correctAnswer++;
 } else {
   // console.log('User has answered question #3 incorrectly');
   alert(`${userName} - That is incorrect.`);
@@ -94,8 +94,8 @@ var answerFour = prompt('Does GTFS stand for \'Get Tested For Sepsis?\'').toUppe
 // Evaluate answer to question #4
 if (answerFour === 'NO' || answerFour === 'N') {
   // console.log('User has answered question #4 correctly');
+  correctAnswers++;
   alert(`${userName} - That is correct!`);
-  correctAnswer++;
 } else {
   // console.log('User has answered question #4 incorrectly');
   alert(`${userName} - That is incorrect. \nGTFS stands for General Transit Feed Specification`);
@@ -108,7 +108,7 @@ var answerFive = prompt(`${userName}, should developers write unit tests?`).toUp
 if (answerFive === 'YES' || answerFive === 'Y') {
   // console.log('User has answered question #5 correctly.');
   alert(`${userName} - That is correct!`);
-  correctAnswer++;
+  correctAnswers++;
 } else {
   // console.log('User has answered question #5 correctly');
   alert(`${userName} - That is incorrect. Good developers write unit tests.`);
@@ -142,8 +142,8 @@ for (let i = 0; i < 4; i++) {
     i--;
   // Main block - Tell user if correct or too high or too low
   } else if (userGuess === randomNumber) {
+    correctAnswers++;
     alert(`${userName} you guessed correctly!`);
-    correctAnswer++;
     break;
   } else if (!prevGuessUsed && userGuess < randomNumber) {
     alert(`${userName} you're guess it too low!`);
@@ -161,8 +161,37 @@ for (let i = 0; i < 4; i++) {
 }
 
 // Ask Question #7 - A question that has multiple possible correct answers that are stored in an array.
-// var answers = ['African or European?', '24 miles per hour', '24mph', '11 meters per second'];
-// var userName = prompt('what is the airspeed velocity of an unladen swallow');
+var answers = ['AFRICAN OR EUROPEAN?', '24 MILES PER HOUR', '24MPH', '11 METERS PER SECOND', '11MPS', '38.6KM/H', '38.6 KILOMETERS PER HOUR'];
+
+// Store boolean for if answered correctly.
+var answeredCorrectly = false;
+
+for (let i = 0; i < 6; i++) {
+  // Send Prompt Every Loop
+  var airSpeedAnswer = prompt(`${userName} what is the airspeed velocity of an unladen swallow?\nThis questions is NOT in a 'Yes' / 'No' or 'Y' / 'N' format`).toUpperCase();
+
+  // Set Answered Correctly to false
+  answeredCorrectly = false;
+
+  // Loop through possible answers
+  for (var j = 0; j < answers.length; j++) {
+    if (airSpeedAnswer === answers[j]) {
+      answeredCorrectly = true;
+    }
+  }
+
+  if (answeredCorrectly) {
+    correctAnswers++;
+    alert(`${userName}, how do you know so much about swallows?`);
+    break;
+  } else {
+    alert(`${userName}, that is incorrect.\nGuesses remaining ${5-i}`);
+  }
+
+  if(answeredCorrectly || i === 5) {
+    alert(`${userName}, the answers are:\n${answers}!`);
+  }
+}
 
 // Return User Score in Alert
-alert(`Your score is: ${correctAnswer} / 7`);
+alert(`${userName}, your score is: ${correctAnswers} / 7`);
