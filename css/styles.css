@@ -53,12 +53,12 @@ p {
 
 ol, ul {
   list-style: unset; /* Reset back to default browser styles */
-  margin-left: 20px;
+  list-style-position: inside;
+  margin-left: 5px;
 }
 
 #top-ten li {
   display: list-item;
-  margin-left: 5px;
   list-style-type: decimal;
   font-weight: 600;
 }
