@@ -49,6 +49,61 @@ alert(`Welcome to my about me page ${userName}! \nPlease answer questions in a '
 // Keep track of score
 var correctAnswers = 0;
 
+const questionsArray = [
+  {
+    question: 'Did I go to The Evergreen State College?',
+    answers: ['YES', 'Y'],
+    correctAnswerResponse: `${userName} - That is correct!`,
+    incorrectAnswerResponse: `${userName} - That is incorrect.`,
+  },
+  {
+    question: 'Do I like open source projects?',
+    answers: ['YES', 'Y'],
+    correctAnswerResponse: `${userName} - That is correct!`,
+    incorrectAnswerResponse: `${userName} - That is incorrect.`,
+  },
+  {
+    question: 'Do I test software for a living?',
+    answers: ['YES', 'Y'],
+    correctAnswerResponse: `${userName} - That is correct!`,
+    incorrectAnswerResponse: `${userName} - That is incorrect.`,
+  },
+  {
+    question: 'Does GTFS stand for \'Get Tested For Sepsis?\'',
+    answers: ['NO', 'N'],
+    correctAnswerResponse: `${userName} - That is correct!`,
+    incorrectAnswerResponse: `${userName} - That is incorrect. \nGTFS stands for General Transit Feed Specification`,
+  },
+  {
+    question: `${userName}, should developers write unit tests?`,
+    answers: ['YES', 'Y'],
+    correctAnswerResponse: `${userName} - That is correct!`,
+    incorrectAnswerResponse: `${userName} - That is incorrect. Good developers write unit tests.`,
+  }
+];
+
+function questionMaker(question, answers, correctAnswerResponse, incorrectAnswerResponse) {
+  var answer = prompt(question).toUpperCase();
+  var correctAnswerHit = false;
+  for (let i = 0; i < answers.length; i++) {
+    if (answer === answers[i]) {
+      correctAnswerHit = true;
+      break;
+    }
+  }
+  if(correctAnswerHit) {
+    correctAnswers++;
+    alert(correctAnswerResponse);
+  } else {
+    alert(incorrectAnswerResponse);
+  }
+}
+
+for (let i = 0; i < questionsArray.length; i++) {
+  questionMaker(questionsArray[i].question, questionsArray[i].answers, questionsArray[i].correctAnswerResponse, questionsArray[i].incorrectAnswerResponse);
+}
+
+/*
 // Ask Question #1
 function questionOne(){
   var answerOne = prompt('Did I go to The Evergreen State College?').toUpperCase();
@@ -129,7 +184,7 @@ function questionFive(){
   }
 }
 questionFive();
-
+*/
 
 // Ask Question #6 - Guessing Game & Random Int Generator
 function questionSix(){
