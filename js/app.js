@@ -34,6 +34,9 @@ Stretch goals:
   - Make the number-guessing question use a random number as its correct answer.
 */
 
+// Lab 05b
+// Refine styles and add existing functions back
+
 
 // Ask The User their name - Display it in an alert - Force the user to enter a name
 var userName = prompt('What is your name?');
@@ -41,7 +44,6 @@ while(!userName) {
   userName = prompt('Really, what is your name?');
 }
 alert(`Welcome to my about me page ${userName}! \nPlease answer questions in a 'Yes' / 'No' or 'Y' / 'N' format.\n *Unless otherwise noted`);
-
 
 // Write 5 questions. Must accept 'yes' or 'no' OR 'y' or 'n' In ANY CASE
 // examples: Yes, yes, YEs, yeS, yEs, Y, y
@@ -103,101 +105,15 @@ for (let i = 0; i < questionsArray.length; i++) {
   questionMaker(questionsArray[i].question, questionsArray[i].answers, questionsArray[i].correctAnswerResponse, questionsArray[i].incorrectAnswerResponse);
 }
 
-/*
-// Ask Question #1
-function questionOne(){
-  var answerOne = prompt('Did I go to The Evergreen State College?').toUpperCase();
-  // console.log(`User normalized answer to question one is: ${answerOne}`);
-  // Evaluate answer to question #1
-  if (answerOne === 'YES' || answerOne === 'Y') {
-    // console.log('User has answered question #1 correctly');
-    correctAnswers++;
-    alert(`${userName} - That is correct!`);
-  } else {
-    // console.log('User has answered question #1 incorrectly');
-    alert(`${userName} - That is incorrect.`);
-  }
-}
-questionOne();
-
-// Ask Question #2
-function questionTwo(){
-  var answerTwo = prompt('Do I like open source projects?').toUpperCase();
-  // console.log(`User normalized answer to question two is: ${answerTwo}`);
-  // Evaluate answer to question #2
-  if (answerTwo === 'YES' || answerTwo === 'Y') {
-    // console.log('User has answered question #2 correctly');
-    correctAnswers++;
-    alert(`${userName} - That is correct!`);
-  } else {
-    // console.log('User has answered question #2 incorrectly');
-    alert(`${userName} - That is incorrect.`);
-  }
-}
-questionTwo();
-
-// Ask Question #3
-function questionThree(){
-  var answerThree = prompt('Do I test software for a living?').toUpperCase();
-  // console.log(`User normalized answer to question three is: ${answerThree}`);
-  // Evaluate answer to question #3
-  if (answerThree === 'YES' || answerThree === 'Y') {
-    // console.log('User has answered question #3 correctly');
-    correctAnswers++;
-    alert(`${userName} - That is correct!`);
-  } else {
-    // console.log('User has answered question #3 incorrectly');
-    alert(`${userName} - That is incorrect.`);
-  }
-}
-questionThree();
-
-// Ask Question #4
-function questionFour(){
-  var answerFour = prompt('Does GTFS stand for \'Get Tested For Sepsis?\'').toUpperCase();
-  // console.log(`User normalized answer to question four is: ${answerFour}`);
-  // Evaluate answer to question #4
-  if (answerFour === 'NO' || answerFour === 'N') {
-    // console.log('User has answered question #4 correctly');
-    correctAnswers++;
-    alert(`${userName} - That is correct!`);
-  } else {
-    // console.log('User has answered question #4 incorrectly');
-    alert(`${userName} - That is incorrect. \nGTFS stands for General Transit Feed Specification`);
-  }
-}
-questionFour();
-
-// Ask Question #5
-function questionFive(){
-  var answerFive = prompt(`${userName}, should developers write unit tests?`).toUpperCase();
-  // console.log(`User normalized answer to question five is: ${answerFive}`);
-  // Evaluate answer to question #5
-  if (answerFive === 'YES' || answerFive === 'Y') {
-    // console.log('User has answered question #5 correctly.');
-    alert(`${userName} - That is correct!`);
-    correctAnswers++;
-  } else {
-    // console.log('User has answered question #5 correctly');
-    alert(`${userName} - That is incorrect. Good developers write unit tests.`);
-    // window.open('https://cloud.google.com/solutions/devops/devops-tech-test-automation#ways_to_improve_continuous_testing', '_blank');
-  }
-}
-questionFive();
-*/
-
 // Ask Question #6 - Guessing Game & Random Int Generator
 function questionSix(){
   var randomNumber = Math.ceil(Math.random(0, 1) * 100);
-  // console.log(`Random Number Generated is: ${randomNumber}`);
 
   // Array to store previous guesses - Personal Stretch Goal
   var previousGuesses = [];
 
-  // console.log(previousGuesses);
   for (let i = 0; i < 4; i++) {
     var userGuess = +prompt(`Guess a Random Number between 0 and 100!\nNumber of guesses remaining ${4-i}`);
-    // console.log(`Random user guess is: ${randomNumber}`);
     while (!userGuess || userGuess < 0 || userGuess > 100) {
       userGuess = +prompt(`Converted value of: '${userGuess}' is not a number, or not in the valid range. Please try again.`);
     }
