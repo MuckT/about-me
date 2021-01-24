@@ -35,7 +35,40 @@ Stretch goals:
 */
 
 // Lab 05b
-// Refine styles and add existing functions back
+// Refine styles and merge service worker branch
+
+
+/****
+ * Register a service worker
+ * Source: https://developers.google.com/web/fundamentals/primers/service-workers
+ */
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('../about-me/sw.js').then(function (registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function (err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+
+/* Style things */
+// Setup our function to run on various events
+var setViewHeight = function () {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+};
+
+// Add our event listeners
+window.addEventListener('load', setViewHeight);
+window.addEventListener('resize', setViewHeight);
+window.addEventListener('orientationchange', setViewHeight);
+document.addEventListener('webkitfullscreenchange', setViewHeight);
+document.addEventListener('mozfullscreenchange', setViewHeight);
+document.addEventListener('fullscreenchange', setViewHeight);
+document.addEventListener('msfullscreenchange', setViewHeight);
 
 
 // Ask The User their name - Display it in an alert - Force the user to enter a name

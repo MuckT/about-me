@@ -1,0 +1,10 @@
+{
+  "short_name": "About Me",
+  "name": "About Me: Tom McGuire",
+  "description": "A short about me page",
+  "start_url": "https://muckt.github.io/about-me",
+  "background_color": "#b7b7a4",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#b7b7a4"
+}

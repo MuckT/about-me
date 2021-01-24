@@ -1,4 +1,4 @@
-# LAB - 02, 03
+# LAB - 02, 03, 04, 05
 
 ## "About Me" project
 
@@ -16,6 +16,7 @@
 * [Hide Scrollbars But Keep Functionality](https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp)
 * [The trick to viewport units on mobile](https://css-tricks.com/the-trick-to-viewport-units-on-mobile/)
 * [The Ordered List element - Attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol#attributes)
+* [Service Workers: an Introduction](https://developers.google.com/web/fundamentals/primers/service-workers)
 
 ### Reflections and Comments
 
@@ -34,3 +35,7 @@
 * [Navigator - Tom McGuire](https://github.com/MuckT)
 * [Driver - Patrick Jarrett PJ](https://github.com/pattywagonpbj)
   * [PR #2](https://github.com/MuckT/about-me/pull/2)
+
+#### LAB - 05 Refactor & Merge Existing Branch
+
+* I really liked this assignment. I think making an about me site is a pretty good exercise. I am excited to refine it and remove the, in my opinion, super annoying prompts. I spent a lot of time upfront with CSS, so I didn't have as much to do at this point. I did merge back in my service worker branch.
