@@ -23,6 +23,8 @@ body main::-webkit-scrollbar {
 body main {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+  height: calc(100vh - 53px); /* Fallback for browsers that do not support Custom Properties */
+  height: calc((var(--vh, 1vh) * 100) - 53px);
 }
 
 abbr, a {
