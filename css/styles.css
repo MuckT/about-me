@@ -11,8 +11,6 @@ body {
 body main{
   max-width: 960px;
   margin: auto;
-  min-height: calc(100vh - 53px);
-  height: calc(100vh - 53px);
   overflow: scroll;
 }
 
@@ -38,7 +36,7 @@ h1 {
   min-height: 25px;
   width: 100%;
   background-color: black;
-  color:cornsilk;
+  color: #a5a58d;
   text-align: center;
   padding-top: 8px;
 }
@@ -55,18 +53,42 @@ p {
 
 ol, ul {
   list-style: unset; /* Reset back to default browser styles */
-  margin-left: 20px;
+  list-style-position: inside;
+  margin-left: 5px;
+}
+
+#top-ten li {
+  display: list-item;
+  list-style-type: decimal;
+  font-weight: 600;
+}
+
+#top-ten li a {
+  font-weight: 400;
 }
 
 footer {
   min-height: 16px;
-  background-color: #a5a58d;
   width: 100%;
   text-align: center;
   background-color: black;
-
 }
 
 footer a {
-  color: cornsilk;
+  color: #a5a58d;
+}
+
+/* Use these instead of an event lister for Lab 3 requirements */
+@media (orientation: landscape) {
+  body main {
+    height: calc(100vh - 53px); /* Fallback for browsers that do not support Custom Properties */
+    height: calc((var(--vh, 1vh) * 100) - 53px);
+  }
+}
+
+@media (orientation: portrait) {
+  body main {
+    height: calc(100vh - 53px); /* Fallback for browsers that do not support Custom Properties */
+    height: calc((var(--vh, 1vh) * 100) - 53px);
+  }
 }
