@@ -54,7 +54,7 @@ if ('serviceWorker' in navigator) {
   });
 }
 
-/*
+
 // Ask The User their name - Display it in an alert - Force the user to enter a name
 var userName = prompt('What is your name?');
 while(!userName) {
@@ -204,4 +204,3 @@ questionSeven();
 
 // Return User Score in Alert
 alert(`${userName}, your score is: ${correctAnswers} / 7`);
-*/
