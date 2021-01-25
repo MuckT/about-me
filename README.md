@@ -17,6 +17,7 @@
 * [The trick to viewport units on mobile](https://css-tricks.com/the-trick-to-viewport-units-on-mobile/)
 * [The Ordered List element - Attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol#attributes)
 * [Service Workers: an Introduction](https://developers.google.com/web/fundamentals/primers/service-workers)
+* [How to Use CSS Grid for Sticky Headers and Footers](https://css-tricks.com/how-to-use-css-grid-for-sticky-headers-and-footers/)
 
 ### Reflections and Comments
 
