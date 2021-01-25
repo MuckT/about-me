@@ -4,43 +4,67 @@
 
 body {
   background-color: #b7b7a4;
-  min-height: 100%;
   line-height: unset;
+  /* grid container settings */
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100); /* iOS Chrome  Fix */
+  display: grid;
+  grid-template-rows: 25px auto 20px;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+    'header'
+    'main'
+    'footer';
 }
 
-body main{
-  max-width: 960px;
-  margin: auto;
-  overflow: scroll;
+header {
+  grid-area: header;
+  font-weight: 800;
+  font-size: 18px;
+  background-color: #000000;
+  color: #a5a58d;
+}
+
+main {
+  grid-area: main;
+  overflow: auto;
+}
+
+footer {
+  grid-area: footer;
+  text-align: center;
+  background-color: black;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
-body main::-webkit-scrollbar {
+body::-webkit-scrollbar {
   display: none;
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
-body main {
+body {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
-  height: calc(100vh - 53px); /* Fallback for browsers that do not support Custom Properties */
-  height: calc((var(--vh, 1vh) * 100) - 53px);
 }
+
+
+footer a {
+  color: #a5a58d;
+}
+
 
 abbr, a {
   text-decoration: none;
   color:black;
 }
 
-h1 {
+header h1 {
   font-size: 18px;
   font-weight: 800;
   min-height: 25px;
-  width: 100%;
-  background-color: black;
+  background-color: #000000;
   color: #a5a58d;
   text-align: center;
-  padding-top: 8px;
+  width: 100%;
 }
 
 h2 {
@@ -54,7 +78,7 @@ p {
 }
 
 ol, ul {
-  list-style: unset; /* Reset back to default browser styles */
+  list-style: unset;
   list-style-position: inside;
   margin-left: 5px;
 }
@@ -69,13 +93,3 @@ ol, ul {
   font-weight: 400;
 }
 
-footer {
-  min-height: 16px;
-  width: 100%;
-  text-align: center;
-  background-color: black;
-}
-
-footer a {
-  color: #a5a58d;
-}

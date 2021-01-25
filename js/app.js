@@ -54,23 +54,7 @@ if ('serviceWorker' in navigator) {
   });
 }
 
-/* Style things */
-// Setup our function to run on various events
-var setViewHeight = function () {
-  let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
-};
-
-// Add our event listeners
-window.addEventListener('load', setViewHeight);
-window.addEventListener('resize', setViewHeight);
-window.addEventListener('orientationchange', setViewHeight);
-document.addEventListener('webkitfullscreenchange', setViewHeight);
-document.addEventListener('mozfullscreenchange', setViewHeight);
-document.addEventListener('fullscreenchange', setViewHeight);
-document.addEventListener('msfullscreenchange', setViewHeight);
-
-
+/*
 // Ask The User their name - Display it in an alert - Force the user to enter a name
 var userName = prompt('What is your name?');
 while(!userName) {
@@ -220,3 +204,4 @@ questionSeven();
 
 // Return User Score in Alert
 alert(`${userName}, your score is: ${correctAnswers} / 7`);
+*/
