@@ -39,11 +39,11 @@ footer {
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
-body::-webkit-scrollbar {
+body::-webkit-scrollbar, main::-webkit-scrollbar {
   display: none;
 }
 
-body {
+body, main {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
@@ -93,5 +93,19 @@ ol, ul {
 
 #top-ten li a {
   font-weight: 400;
+}
+
+button > * {
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#take-quiz {
+  display: block;
+  margin: 20px auto;
+  font-size: 20px;
 }
 

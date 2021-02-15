@@ -8,16 +8,18 @@
 
 ### Links and Resources
 
-* [Reset CSS](https://meyerweb.com/eric/tools/css/reset/)
-* [GTFS Docs](https://developers.google.com/transit/gtfs)
-* [Window.open()](https://developer.mozilla.org/en-US/docs/Web/API/Window/open)
-* [Lang](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang)
-* [Sticky-footers](https://css-tricks.com/fun-viewport-units/#full-height-layouts-hero-images-and-sticky-footers)
-* [Hide Scrollbars But Keep Functionality](https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp)
-* [The trick to viewport units on mobile](https://css-tricks.com/the-trick-to-viewport-units-on-mobile/)
-* [The Ordered List element - Attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol#attributes)
-* [Service Workers: an Introduction](https://developers.google.com/web/fundamentals/primers/service-workers)
-* [How to Use CSS Grid for Sticky Headers and Footers](https://css-tricks.com/how-to-use-css-grid-for-sticky-headers-and-footers/)
+* [Reset CSS](https://meyerweb.com/eric/tools/css/reset/ "Reset CSS")
+* [GTFS Docs](https://developers.google.com/transit/gtfs "General Transit Feed Specification Documentation")
+* [Window.open()](https://developer.mozilla.org/en-US/docs/Web/API/Window/open "Window.open() Documentation")
+* [Lang](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang "html lang")
+* [Sticky-footers](https://css-tricks.com/fun-viewport-units/#full-height-layouts-hero-images-and-sticky-footers "Sticky-footers")
+* [Hide Scrollbars But Keep Functionality](https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp "Hide Scrollbars But Keep Functionality")
+* [The trick to viewport units on mobile](https://css-tricks.com/the-trick-to-viewport-units-on-mobile/ "The trick to viewport units on mobile")
+* [The Ordered List element - Attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol#attributes "The Ordered List element - Attributes")
+* [Service Workers: an Introduction](https://developers.google.com/web/fundamentals/primers/service-workers "Service Workers: an Introduction")
+* [How to Use CSS Grid for Sticky Headers and Footers](https://css-tricks.com/how-to-use-css-grid-for-sticky-headers-and-footers/ "How to Use CSS Grid for Sticky Headers and Footers")
+* [Be Slightly Careful with Sub Elements of Clickable Things](https://css-tricks.com/slightly-careful-sub-elements-clickable-things/ "Be Slightly Careful with Sub Elements of Clickable Things")
+* [Block Keyboard Inputs in html pages using css or javascript](https://stackoverflow.com/a/51295654/7967484 "Block Keyboard Inputs in html pages using css or javascript")
 
 ### Reflections and Comments
 

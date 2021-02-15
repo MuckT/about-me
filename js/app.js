@@ -53,53 +53,8 @@ if ('serviceWorker' in navigator) {
     });
   });
 }
-
-
-// Ask The User their name - Display it in an alert - Force the user to enter a name
-var userName = prompt('What is your name?');
-while(!userName) {
-  userName = prompt('Really, what is your name?');
-}
-alert(`Welcome to my about me page ${userName}! \nPlease answer questions in a 'Yes' / 'No' or 'Y' / 'N' format.\n *Unless otherwise noted`);
-
-// Write 5 questions. Must accept 'yes' or 'no' OR 'y' or 'n' In ANY CASE
-// examples: Yes, yes, YEs, yeS, yEs, Y, y
-
-// Keep track of score
+// Put Correct Answers in Global Scope
 var correctAnswers = 0;
-
-const questionsArray = [
-  {
-    question: 'Did I go to The Evergreen State College?',
-    answers: ['YES', 'Y'],
-    correctAnswerResponse: `${userName} - That is correct!`,
-    incorrectAnswerResponse: `${userName} - That is incorrect.`,
-  },
-  {
-    question: 'Do I like open source projects?',
-    answers: ['YES', 'Y'],
-    correctAnswerResponse: `${userName} - That is correct!`,
-    incorrectAnswerResponse: `${userName} - That is incorrect.`,
-  },
-  {
-    question: 'Do I test software for a living?',
-    answers: ['YES', 'Y'],
-    correctAnswerResponse: `${userName} - That is correct!`,
-    incorrectAnswerResponse: `${userName} - That is incorrect.`,
-  },
-  {
-    question: 'Does GTFS stand for \'Get Tested For Sepsis?\'',
-    answers: ['NO', 'N'],
-    correctAnswerResponse: `${userName} - That is correct!`,
-    incorrectAnswerResponse: `${userName} - That is incorrect. \nGTFS stands for General Transit Feed Specification`,
-  },
-  {
-    question: `${userName}, should developers write unit tests?`,
-    answers: ['YES', 'Y'],
-    correctAnswerResponse: `${userName} - That is correct!`,
-    incorrectAnswerResponse: `${userName} - That is incorrect. Good developers write unit tests.`,
-  }
-];
 
 function questionMaker(question, answers, correctAnswerResponse, incorrectAnswerResponse) {
   var answer = prompt(question).toUpperCase();
@@ -118,12 +73,8 @@ function questionMaker(question, answers, correctAnswerResponse, incorrectAnswer
   }
 }
 
-for (let i = 0; i < questionsArray.length; i++) {
-  questionMaker(questionsArray[i].question, questionsArray[i].answers, questionsArray[i].correctAnswerResponse, questionsArray[i].incorrectAnswerResponse);
-}
-
 // Ask Question #6 - Guessing Game & Random Int Generator
-function questionSix(){
+function questionSix(userName){
   var randomNumber = Math.ceil(Math.random(0, 1) * 100);
 
   // Array to store previous guesses - Personal Stretch Goal
@@ -164,10 +115,9 @@ function questionSix(){
     }
   }
 }
-questionSix();
 
 // Ask Question #7 - A question that has multiple possible correct answers that are stored in an array.
-function questionSeven(){
+function questionSeven(userName){
   var answers = ['AFRICAN OR EUROPEAN?', '24 MILES PER HOUR', '24MPH', '11 METERS PER SECOND', '11MPS', '38.6KM/H', '38.6 KILOMETERS PER HOUR'];
 
   // Store boolean for if answered correctly.
@@ -200,7 +150,77 @@ function questionSeven(){
     }
   }
 }
-questionSeven();
 
-// Return User Score in Alert
-alert(`${userName}, your score is: ${correctAnswers} / 7`);
+function handleClick(e){
+  e.stopPropagation();
+  e.preventDefault();
+  takeQuiz();
+}
+
+// Get Form Input
+let myButton = document.querySelector('#take-quiz');
+
+// Add Form Event Listener
+myButton.addEventListener('click', handleClick);
+
+function takeQuiz () {
+  var userName = prompt('What is your name?');
+  // Ask The User their name - Display it in an alert - Force the user to enter a name
+  while(!userName) {
+    userName = prompt('Really, what is your name?');
+  }
+
+  // Write 5 questions. Must accept 'yes' or 'no' OR 'y' or 'n' In ANY CASE
+  // examples: Yes, yes, YEs, yeS, yEs, Y, y
+
+  // Keep track of score
+  correctAnswers = 0;
+  const questionsArray = [
+    {
+      question: 'Did I go to The Evergreen State College?',
+      answers: ['YES', 'Y'],
+      correctAnswerResponse: `${userName} - That is correct!`,
+      incorrectAnswerResponse: `${userName} - That is incorrect.`,
+    },
+    {
+      question: 'Do I like open source projects?',
+      answers: ['YES', 'Y'],
+      correctAnswerResponse: `${userName} - That is correct!`,
+      incorrectAnswerResponse: `${userName} - That is incorrect.`,
+    },
+    {
+      question: 'Do I test software for a living?',
+      answers: ['YES', 'Y'],
+      correctAnswerResponse: `${userName} - That is correct!`,
+      incorrectAnswerResponse: `${userName} - That is incorrect.`,
+    },
+    {
+      question: 'Does GTFS stand for \'Get Tested For Sepsis?\'',
+      answers: ['NO', 'N'],
+      correctAnswerResponse: `${userName} - That is correct!`,
+      incorrectAnswerResponse: `${userName} - That is incorrect. \nGTFS stands for General Transit Feed Specification`,
+    },
+    {
+      question: `${userName}, should developers write unit tests?`,
+      answers: ['YES', 'Y'],
+      correctAnswerResponse: `${userName} - That is correct!`,
+      incorrectAnswerResponse: `${userName} - That is incorrect. Good developers write unit tests.`,
+    }
+  ];
+
+  for (let i = 0; i < questionsArray.length; i++) {
+    questionMaker(questionsArray[i].question, questionsArray[i].answers, questionsArray[i].correctAnswerResponse, questionsArray[i].incorrectAnswerResponse);
+  }
+
+  alert(`Welcome to my about me page ${userName}! \nPlease answer questions in a 'Yes' / 'No' or 'Y' / 'N' format.\n *Unless otherwise noted`);
+
+  for (let i = 0; i < questionsArray.length; i++) {
+    questionMaker(questionsArray[i].question, questionsArray[i].answers, questionsArray[i].correctAnswerResponse, questionsArray[i].incorrectAnswerResponse);
+  }
+
+  questionSix(userName);
+  questionSeven(userName);
+
+  // Return User Score in Alert
+  alert(`${userName}, your score is: ${correctAnswers} / 7`);
+}
